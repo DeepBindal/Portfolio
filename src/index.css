@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bottombar {
+    @apply fixed bottom-0 z-10 w-full rounded-t-3xl  p-4 backdrop-blur-lg sm:px-7 md:hidden;
+  }
+
+  .bottombar_container {
+    @apply flex items-center justify-between gap-3 sm:gap-5;
+  }
+
+  .bottombar_link {
+    @apply relative flex flex-col items-center gap-2 rounded-lg p-2 sm:flex-1 sm:px-2 sm:py-2.5;
+  }
+
+  .sedan-sc-regular {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .montserrat-font {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
