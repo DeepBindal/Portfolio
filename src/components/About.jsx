@@ -1,22 +1,39 @@
-import { Button } from "@nextui-org/react";
-import React from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 function About() {
+  const imgRef = useRef(null);
+  const textRef = useRef(null);
+  const imgInView = useInView(imgRef, { once: true });
+  const textInView = useInView(textRef);
+
   return (
     <div
       id="about"
       className="mx-4 sm:mx-10 px-4 sm:px-40 my-10 flex flex-col sm:flex-row justify-between items-center"
     >
-      <div className="img mb-8 sm:mb-0">
+      <motion.div
+        ref={imgRef}
+        className="img mb-8 sm:mb-0"
+        initial={{ opacity: 0, x: -100 }}
+        animate={imgInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+        transition={{ duration: 0.5 }}
+      >
         <img
           src="/pp.png"
           height={390}
           width={290}
           alt="profile pic"
-          className="rounded-xl"
+          className="rounded-xl shadow-lg"
         />
-      </div>
-      <div className="w-full sm:w-1/2 flex flex-col justify-center items-center">
+      </motion.div>
+      <motion.div
+        ref={textRef}
+        className="w-full sm:w-1/2 flex flex-col justify-center items-center"
+        initial={{ opacity: 0, x: 100 }}
+        animate={textInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+        transition={{ duration: 0.5 }}
+      >
         <h4 className="text-3xl text-white my-4">About</h4>
         <p className="text-gray-400 text-center mb-4">
           Hey there! I'm Deep Bindal, a passionate full-stack developer with a
@@ -32,28 +49,39 @@ function About() {
           React.js, to architecting robust and scalable server-side solutions
           with technologies like Node.js and Express.js.
         </p>
-        <div className="flex justify-center items-center w-full sm:w-3/5">
-        <a href="/skills.svg" download>
-          <button class="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px]">
-            Resume
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              class="w-5 h-5 animate-bounce"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
-              ></path>
-            </svg>
-          </button>
+        <motion.div
+          className="flex justify-center items-center w-full sm:w-3/5"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <a href="/skills.svg" download>
+            <button className="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 duration-500 hover:ring-1 font-mono w-[150px]">
+              Resume
+              <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-5 h-5 animate-bounce"
+                initial={{ y: -5 }}
+                animate={{ y: 5 }}
+                transition={{
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                ></path>
+              </motion.svg>
+            </button>
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
