@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 function About() {
   const imgRef = useRef(null);
   const textRef = useRef(null);
-  const imgInView = useInView(imgRef, { once: true });
+  const imgInView = useInView(imgRef);
   const textInView = useInView(textRef);
 
   return (
@@ -30,8 +30,8 @@ function About() {
       <motion.div
         ref={textRef}
         className="w-full sm:w-1/2 flex flex-col justify-center items-center"
-        initial={{ opacity: 0, x: 100 }}
-        animate={textInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+        initial={{ opacity: 0, y: 100 }}
+        animate={textInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 0.5 }}
       >
         <h4 className="text-3xl text-white my-4">About</h4>

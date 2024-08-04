@@ -19,14 +19,9 @@ function Navbar() {
       </div>
 
       <div className="">
-      <Link to="#contact" smooth={true} duration={500}>
-        <Button
-          radius="full"
-          className="bg-gradient-to-r from-cyan-500 to-blue-500  text-white shadow-lg"
-        >
+      <a href="#contact" className="px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500  text-white shadow-lg">
           Contact Me
-        </Button>
-        </Link>
+        </a>
       </div>
     </nav>
   );

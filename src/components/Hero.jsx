@@ -11,7 +11,7 @@ function Hero() {
       ref={containerRef}
       initial={{ opacity: 0, y: 50 }}
       animate={containerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.8 }}
     >
       <span className="text-2xl lg:text-3xl text-gray-700">I'm a</span>
       <motion.p
