@@ -54,7 +54,7 @@ function About() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a href="/skills.svg" download>
+          <a href="https://drive.google.com/file/d/1yzMfK-OS4jq-RS8WLgCQwwaRj_2yk_L9/view?usp=drive_link" >
             <button className="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 duration-500 hover:ring-1 font-mono w-[150px]">
               Resume
               <motion.svg
