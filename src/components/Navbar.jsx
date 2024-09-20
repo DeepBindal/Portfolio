@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
@@ -12,16 +12,53 @@ function Navbar() {
       <div className="list">
         <ul className="sm:flex hidden text-white items-center">
           <li className="mx-4 hover:text-blue-400 cursor-pointer">Home</li>
-          <li className="mx-4 hover:text-blue-400 cursor-pointer"><a href="#about">About</a></li>
-          <li className="mx-4 hover:text-blue-400 cursor-pointer"><a href="#skills">Skills</a></li>
-          <li className="mx-4 hover:text-blue-400 cursor-pointer"><a href="#portfolio">Portfolio</a></li>
+          <li className="mx-4 hover:text-blue-400 cursor-pointer">
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              About
+            </Link>
+          </li>
+          <li className="mx-4 hover:text-blue-400 cursor-pointer">
+            <Link
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-40}
+              duration={500}
+            >
+              Skills
+            </Link>
+          </li>
+          <li className="mx-4 hover:text-blue-400 cursor-pointer">
+            <Link
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-40}
+              duration={500}
+            >
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </div>
 
       <div className="">
-      <a href="#contact" className="px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500  text-white shadow-lg">
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}
+          className="px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500  text-white shadow-lg"
+        >
           Contact Me
-        </a>
+        </Link>
       </div>
     </nav>
   );

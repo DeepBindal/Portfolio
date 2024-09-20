@@ -1,12 +1,12 @@
 export const sidebarLinks = [
-  { route: "Home", imgUrl: "/home.svg", label: "Home", link: "#home" },
-  { route: "About", imgUrl: "/about.svg", label: "About", link: "#about" },
-  { route: "Skills", imgUrl: "/skills.svg", label: "Skills", link: "#skills" },
+  { route: "Home", imgUrl: "/home.svg", label: "Home", link: "home" },
+  { route: "About", imgUrl: "/about.svg", label: "About", link: "about" },
+  { route: "Skills", imgUrl: "/skills.svg", label: "Skills", link: "skills" },
   {
     route: "Portfolio",
     imgUrl: "/portfolio.svg",
     label: "Portfolio",
-    link: "#portfolio",
+    link: "portfolio",
   },
 ];
 

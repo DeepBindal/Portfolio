@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { sidebarLinks } from "../constants";
 
 function Footer() {
@@ -7,9 +8,13 @@ function Footer() {
       <div className='bottombar_container'>
         {sidebarLinks.map((link) => {
           return (
-            <a
-              href={link.link}
+            <Link
+              to={link.link}
               key={link.label}
+              spy={true}
+              smooth={true}
+              offset={-40}
+              duration={500}
               className={`bottombar_link `}
             >
               <img
@@ -23,7 +28,7 @@ function Footer() {
               <p className='text-subtle-medium text-white sm:hidden'>
                 {link.label.split(/\s+/)[0]}
               </p>
-            </a>
+            </Link>
           );
         })}
       </div>

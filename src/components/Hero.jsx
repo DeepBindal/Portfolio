@@ -1,36 +1,47 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 function Hero() {
-  const containerRef = useRef(null);
-  const containerInView = useInView(containerRef);
+  const controls = useAnimation();
+
+  // Typewriter words
+  const [text] = useTypewriter({
+    words: ["Web Developer", "React Developer", "Node Developer", "Java Developer"],
+    loop: {},
+  });
+
+  // Run the animation on component mount
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, ease: "easeOut" },
+    });
+  }, [controls]);
 
   return (
-    <motion.div
-      className="mx-10 px-10 sm:mb-40 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10 "
-      ref={containerRef}
-      initial={{ opacity: 0, y: 50 }}
-      animate={containerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
-    >
-      <span className="text-2xl lg:text-3xl text-gray-700">I'm a</span>
-      <motion.p
-        className="text-5xl lg:text-8xl"
+    <div className="mx-10 px-10 sm:mb-40 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
+      <motion.span
+        className="text-2xl lg:text-3xl text-gray-700"
         initial={{ opacity: 0, y: 50 }}
-        animate={containerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        animate={controls}
+      >
+        I'm a
+      </motion.span>
+
+      <motion.p
+        className="text-5xl text-white lg:text-8xl"
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
         transition={{ delay: 0.2, duration: 1 }}
       >
-        Full Stack
+        <span>{text}</span>
+        <span>
+          <Cursor />
+        </span>
       </motion.p>
-      <motion.p
-        className="text-5xl lg:text-8xl"
-        initial={{ opacity: 0, y: 50 }}
-        animate={containerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        transition={{ delay: 0.4, duration: 1 }}
-      >
-        Developer
-      </motion.p>
-    </motion.div>
+    </div>
   );
 }
 
