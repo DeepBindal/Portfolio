@@ -21,7 +21,7 @@ function Hero() {
   }, [controls]);
 
   return (
-    <div className="mx-10 px-10 sm:mb-40 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
+    <div className="mx-10 px-10 sm:mb-44 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
       <motion.span
         className="text-2xl lg:text-3xl text-gray-700"
         initial={{ opacity: 0, y: 50 }}
