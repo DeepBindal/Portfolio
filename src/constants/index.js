@@ -28,7 +28,7 @@ export const skills = [
 export const projects = [
   {
     title: "SciSphere",
-    link: "https://my-blog-wheat-nine.vercel.app/",
+    link: "https://scisphere.vercel.app/",
     image: "/projects/SciSphereImg.png",
     description: `	Dynamic science blogging platform, curating and publishing engaging content across diverse scientific disciplines.
 	Implemented user-friendly interface enhancements and optimized site performance, enhancing the overall user experience.
@@ -59,6 +59,20 @@ export const projects = [
     description: `	User friendly UI for users to browse multiple products and add them to cart and purchase them.
 	Payment gateway integration using razorpay.
 	 Built using (MERN), React.js, Node.js, Express.js, MongoDB, Mongoose, NextUI
+`,
+  },
+  {
+    title: "Progress Pulse",
+    link: "https://progress-pulse-ashy.vercel.app/",
+    image: "/projects/ProgressPulse.png",
+    description: `A workout tracker web app to Achieve your fitness goals with personalized workout plans, progress tracking, and performance analysis.Get Ai assisted workouts.Implemented a progress page with visual charts to show users exercise progression between sessions, providing insights into strength and performance improvements over time.
+`,
+  },
+  {
+    title: "Evntly",
+    link: "https://evently-tau-rose.vercel.app/",
+    image: "/projects/Evently.png",
+    description: `A workout tracker web app to Achieve your fitness goals with personalized workout plans, progress tracking, and performance analysis.Get Ai assisted workouts.Implemented a progress page with visual charts to show users exercise progression between sessions, providing insights into strength and performance improvements over time.
 `,
   },
 ];

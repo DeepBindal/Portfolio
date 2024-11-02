@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { BackgroundLines } from "./ui/background-lines";
 
 function Hero() {
   const controls = useAnimation();
@@ -21,7 +22,8 @@ function Hero() {
   }, [controls]);
 
   return (
-    <div className="mx-10 px-10 sm:mb-44 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
+    <div id="home" className="mx-10 px-10 sm:mb-44 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
+      <BackgroundLines>
       <motion.span
         className="text-2xl lg:text-3xl text-gray-700"
         initial={{ opacity: 0, y: 50 }}
@@ -41,6 +43,7 @@ function Hero() {
           <Cursor />
         </span>
       </motion.p>
+      </BackgroundLines>
     </div>
   );
 }

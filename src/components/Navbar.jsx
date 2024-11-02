@@ -4,14 +4,24 @@ import { Link } from "react-scroll";
 
 function Navbar() {
   return (
-    <nav className="flex items-center montserrat-font justify-between w-full py-5 px-6 mb-10">
+    <nav className="flex items-center z-10 montserrat-font justify-between w-full py-5 px-6 mb-20">
       <div className="logo w-10 h-10">
         <img src="/logo.png" alt="" />
       </div>
 
       <div className="list">
         <ul className="sm:flex hidden text-white items-center">
-          <li className="mx-4 hover:text-blue-400 cursor-pointer">Home</li>
+          <li className="mx-4 hover:text-blue-400 cursor-pointer">
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Home
+            </Link>
+          </li>
           <li className="mx-4 hover:text-blue-400 cursor-pointer">
             <Link
               to="about"
@@ -48,14 +58,14 @@ function Navbar() {
         </ul>
       </div>
 
-      <div className="">
+      <div className="cursor-pointer">
         <Link
           to="contact"
           spy={true}
           smooth={true}
           offset={50}
           duration={500}
-          className="px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500  text-white shadow-lg"
+          className="px-4 py-3 cursor-pointer rounded-full bg-gradient-to-r from-cyan-500 to-blue-500  text-white shadow-lg"
         >
           Contact Me
         </Link>

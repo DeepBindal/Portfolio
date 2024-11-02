@@ -1,19 +1,21 @@
 import React from "react";
+import { BackgroundGradient } from "./ui/background-gradient";
+import { Image } from "@nextui-org/react";
 
-function Card({imgUrl, skill}) {
+export default function Card({ imgUrl, skill }) {
   return (
-    <article className="p-8 relative duration-500 hover:[transform:rotate3d(20_,-10,_1,_50deg)] m-4 rounded-xl flex flex-col items-center justify-evenly bg-gray-100/5 shadow-5xl">
-      <div className="img">
-        <img
+    <div className="max-w-xs w-full">
+      <BackgroundGradient className="flex flex-col items-center justify-center h-44 w-full rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+        <Image
           src={imgUrl}
-          height="75"
-          width="75"
-          className="bg-blend-multiply"
-        />
-      </div>
-      <div className="mt-4 text-center font-bold">{skill}</div>
-    </article>
+          alt="skill-img"
+          height={80}  // Set a fixed height
+          width={80}   // Set a fixed width
+          className="object-contain" />
+        <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
+          {skill}
+        </p>
+      </BackgroundGradient>
+    </div>
   );
 }
-
-export default Card;
