@@ -49,7 +49,7 @@ function Navbar() {
               to="portfolio"
               spy={true}
               smooth={true}
-              offset={-40}
+              offset={-20}
               duration={500}
             >
               Portfolio

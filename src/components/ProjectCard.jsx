@@ -12,7 +12,7 @@ export default function ProjectCard() {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-gray-100/5 mx-auto mb-10 py-4 w-full sm:w-5/6 relative duration-500 hover:[transform:rotate3d(20_,-10,_1,_30deg)]"
+          className="bg-gray-100/5 rounded-3xl mx-auto mb-10 py-4 w-full sm:w-5/6 relative duration-500 hover:[transform:rotate3d(20_,-10,_1,_30deg)]"
         >
           <Card className="bg-transparent border-none shadow-none">
             <CardBody className="flex flex-col sm:flex-row items-center justify-evenly py-2">

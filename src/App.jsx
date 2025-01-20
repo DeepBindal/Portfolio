@@ -10,7 +10,7 @@ import ContactMe from "./components/ContactMe";
 export default function App() {
   return (
     <>
-      <div className="flex min-h-screen flex-1 flex-col">
+      <div className="flex flex-1 flex-col">
         <Navbar />
         <Hero />
         <About />

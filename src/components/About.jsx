@@ -10,7 +10,7 @@ function About() {
   return (
     <div
       id="about"
-      className="mx-4 sm:mx-10 px-4 sm:px-40 my-10 flex flex-col sm:flex-row justify-between items-center"
+      className="mx-4 sm:mx-10 px-4 sm:px-40 flex flex-col sm:flex-row justify-between items-center mb-10"
     >
       <motion.div
         ref={imgRef}

@@ -22,10 +22,10 @@ function Hero() {
   }, [controls]);
 
   return (
-    <div id="home" className="mx-10 px-10 sm:mb-44 mb-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
-      <BackgroundLines>
+    <div id="home" className="mx-10 px-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
+      <BackgroundLines >
       <motion.span
-        className="text-2xl lg:text-3xl text-gray-700"
+        className="text-2xl lg:text-5xl text-gray-700"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
       >
