@@ -16,7 +16,7 @@ function Navbar() {
               to="home"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-200}
               duration={500}
             >
               Home
@@ -27,7 +27,7 @@ function Navbar() {
               to="about"
               spy={true}
               smooth={true}
-              offset={-100}
+              offset={-50}
               duration={500}
             >
               About

@@ -4,23 +4,23 @@ import { CiMail } from "react-icons/ci";
 
 const ContactMe = () => {
   return (
-    <div id="contact" className="text-white bgay-900 py-12">
+    <div id="contact" className="text-white montserrat-font py-12">
       <div className="container mx-auto text-center px-4">
         <div className="flex my-4 items-center">
-          <div className="flex-grow h-0.5 bg-yellow-300"></div>
+          <div className="flex-grow h-0.5 bg-blue-950/90"></div>
           <h2 className="px-4 text-2xl font-bold">Contact Me</h2>
-          <div className="flex-grow h-0.5 bg-yellow-300"></div>
+          <div className="flex-grow h-0.5 bg-blue-950/90"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-yellow-300 p-8 rounded-lg flex items-center justify-center">
+          <div className="bg-blue-950/90 p-8 rounded-lg flex items-center justify-center">
             <div className="flex items-center">
               <CiMail className="text-3xl" />
-              <span className="ml-4 text-2xl">deepbindal36@gmail.com</span>
+              <a href="mailto:deepbindal36@gmail.com"><span className="ml-4 text-2xl">deepbindal36@gmail.com</span></a>
             </div>
           </div>
 
-          <div className="bg-yellow-300 p-8 rounded-lg flex items-center justify-center">
+          <div className="bg-blue-950/90 p-8 rounded-lg flex items-center justify-center">
             <div className="flex items-center">
               <FaRegAddressCard className="text-3xl" />
               <span className="ml-4 text-2xl">Sonipat, Haryana</span>

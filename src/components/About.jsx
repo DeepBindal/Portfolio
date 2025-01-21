@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
+import { BackgroundGradient } from "./ui/background-gradient";
 
 function About() {
   const imgRef = useRef(null);
@@ -10,7 +11,7 @@ function About() {
   return (
     <div
       id="about"
-      className="mx-4 sm:mx-10 px-4 sm:px-40 flex flex-col sm:flex-row justify-between items-center mb-10"
+      className="mx-4 sm:mx-10 px-4 sm:px-40 flex flex-col sm:flex-row justify-between items-center mb-10 montserrat-font"
     >
       <motion.div
         ref={imgRef}
@@ -19,13 +20,17 @@ function About() {
         animate={imgInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
         transition={{ duration: 0.5 }}
       >
+        <div>
+        <BackgroundGradient className="">
         <img
-          src="/pp.png"
+          src="/PPImage.jpg"
           height={390}
           width={290}
           alt="profile pic"
-          className="rounded-xl shadow-lg"
+          className="rounded-3xl shadow-lg"
         />
+        </BackgroundGradient>
+        </div>
       </motion.div>
       <motion.div
         ref={textRef}
@@ -35,13 +40,13 @@ function About() {
         transition={{ duration: 0.5 }}
       >
         <h4 className="text-3xl text-white my-4">About</h4>
-        <p className="text-gray-400 text-center mb-4">
+        <p className="text-gray-400 text-justify mb-4">
           Hey there! I'm Deep Bindal, a passionate full-stack developer with a
           knack for turning ideas into reality through code. With a strong
           foundation in both front-end and back-end technologies, I thrive in
           crafting seamless, user-centric web experiences.
         </p>
-        <p className="text-gray-400 text-center mb-4">
+        <p className="text-gray-400 text-justify mb-4">
           My journey in software development began with a curiosity-driven
           exploration of web technologies, and since then, I've been on a
           relentless quest for growth and innovation. From building responsive

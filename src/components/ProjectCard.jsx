@@ -24,10 +24,10 @@ export default function ProjectCard() {
                 />
               </div>
               <div className="w-full sm:w-1/2 flex flex-col items-center justify-center mt-4 sm:mt-0">
-                <h4 className="text-3xl sm:text-5xl my-4 text-gray-800 sedan-sc-regular">
+                <h4 className="text-3xl sm:text-5xl my-4 text-gray-300 sedan-sc-regular">
                   {project.title}
                 </h4>
-                <p className="text-gray-600 montserrat-font text-start px-4">
+                <p className="text-gray-500 montserrat-font text-justify px-4">
                   {project.description}
                 </p>
                 <a href={project.link} target="_blank" rel="noopener noreferrer">

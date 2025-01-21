@@ -8,7 +8,12 @@ function Hero() {
 
   // Typewriter words
   const [text] = useTypewriter({
-    words: ["Web Developer", "React Developer", "Node Developer", "Java Developer"],
+    words: [
+      "Web Developer",
+      "React Developer",
+      "Node Developer",
+      "Java Developer",
+    ],
     loop: {},
   });
 
@@ -22,8 +27,10 @@ function Hero() {
   }, [controls]);
 
   return (
-    <div id="home" className="mx-10 px-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10">
-      <BackgroundLines >
+    <div
+      id="home"
+      className="mx-10 px-10 sedan-sc-regular text-4xl lg:text-8xl text-white sm:mt-10 mb-40"
+    >
       <motion.span
         className="text-2xl lg:text-5xl text-gray-700"
         initial={{ opacity: 0, y: 50 }}
@@ -43,7 +50,6 @@ function Hero() {
           <Cursor />
         </span>
       </motion.p>
-      </BackgroundLines>
     </div>
   );
 }
