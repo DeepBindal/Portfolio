@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Footer />
         <Projects />
         <ContactMe />
+        <Analytics />
       </div>
     </>
   );
